@@ -1,0 +1,71 @@
+# ==========================================
+# Root .gitignore - Attendance System Monorepo
+# Covers AppChecador-main, TVProject & backend_huella
+# ==========================================
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables & local secrets
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+
+# Expo & React Native builds and caches
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+.metro-health-check*
+
+# Generated Native Prebuild Outputs
+ios/
+android/
+.kotlin/
+
+# Certificates, Keys & Keystores
+*.jks
+*.p8
+*.p12
+*.key
+*.keystore
+*.mobileprovision
+*.pem
+*.orig.*
+
+# Logs & Debugging
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor caches
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.claude/
+
+# Database dumps and local storage
+*.sqlite
+*.sqlite3
+*.dump

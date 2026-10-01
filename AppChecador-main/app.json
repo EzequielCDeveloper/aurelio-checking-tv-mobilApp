@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "BioCheck Sentinel",
+    "slug": "appchecador",
+    "scheme": "appchecador",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.biocheck.sentinel",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "BioCheck Sentinel usa tu ubicacion para verificar que te registras dentro de la geocerca de la oficina."
+      }
+    },
+    "android": {
+      "package": "com.biocheck.sentinel",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "BioCheck Sentinel usa la camara para escanear el codigo QR del terminal de acceso.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "BioCheck Sentinel usa Face ID para confirmar que eres tu al registrar tu asistencia."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "BioCheck Sentinel usa tu ubicacion para verificar que te registras dentro de la geocerca de la oficina."
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-font",
+      "expo-asset",
+      "expo-image",
+      "expo-sharing",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-status-bar",
+      "expo-secure-store"
+    ]
+  }
+}
